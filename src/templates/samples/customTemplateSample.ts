@@ -2,6 +2,9 @@ import { v2 } from "@govtechsg/open-attestation";
 
 export interface CocTemplateCertificate extends v2.OpenAttestationDocument {
   name: string;
+  refno: string;
+  certdate: string;
+  recertifydate: string;
   recipient: {
     name: string;
   };
@@ -9,6 +12,9 @@ export interface CocTemplateCertificate extends v2.OpenAttestationDocument {
 
 export const cocTemplateCertificate: CocTemplateCertificate = {
   name: "OpenAttestation Tutorial Certificate of Completion",
+  refno: "123",
+  certdate: "123",
+  recertifydate: "123",
   issuers: [
     {
       name: "My name",
