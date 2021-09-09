@@ -1,6 +1,6 @@
-import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-components";
-import { templates } from "./cdf";
+import React from "react";
+import ReactDOM from "react-dom";
+import { FramedDocumentRenderer } from "@govtechsg/decentralized-renderer-react-components";
+import { registry } from "./templates";
 
-export const registry: TemplateRegistry<any> = {
-  CDF: templates
-};
+ReactDOM.render(<FramedDocumentRenderer templateRegistry={registry} />, document.getElementById("root"));
