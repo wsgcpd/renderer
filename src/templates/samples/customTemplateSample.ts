@@ -1,28 +1,36 @@
 import { v2 } from "@govtechsg/open-attestation";
 
-export interface CustomTemplateCertificate extends v2.OpenAttestationDocument {
+export interface CDFTemplateCertificate extends v2.OpenAttestationDocument {
   name: string;
-  institute: string;
-  foo?: {
-    title: string;
+  refno: string;
+  certdate: string;
+  recertifydate: string;
+  recipient: {
+    name: string;
   };
-  $template: v2.TemplateObject;
 }
 
-export const customTemplateCertificate: CustomTemplateCertificate = {
-  name: "John Doe",
-  institute: "Institute of John Doe",
+export const cocTemplateCertificate: CDFTemplateCertificate = {
+  name: "Certified Career Advisor",
+  refno: "123",
+  certdate: "123",
+  recertifydate: "123",
   issuers: [
     {
-      name: "institute of blockchain"
+      name: "Workforce Singapore",
+      documentStore: "0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b",
+      identityProof: {
+        location: "few-green-cat.sandbox.openattestation.com",
+        type: v2.IdentityProofType.DNSTxt
+      }
     }
   ],
+  recipient: {
+    name: "Test"
+  },
   $template: {
-    name: "custom",
+    name: "CDF",
     type: v2.TemplateType.EmbeddedRenderer,
     url: "http://localhost:3000"
-  },
-  foo: {
-    title: "Bar is awesome"
   }
 };
