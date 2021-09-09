@@ -17,7 +17,7 @@ export const cocTemplateCertificate: CocTemplateCertificate = {
   recertifydate: "123",
   issuers: [
     {
-      name: "My name",
+      name: "Workforce Singapore",
       documentStore: "0x8aD593607716128c49307743D8CCa1150E4a74FF",
       identityProof: {
         location: "https://nostalgic-galileo-0c9f89.netlify.app/",
