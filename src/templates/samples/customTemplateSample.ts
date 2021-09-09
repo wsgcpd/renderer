@@ -31,6 +31,6 @@ export const cocTemplateCertificate: CocTemplateCertificate = {
   $template: {
     name: "COC",
     type: v2.TemplateType.EmbeddedRenderer,
-    url: "http://localhost:3000"
+    url: "https://nostalgic-galileo-0c9f89.netlify.app/"
   }
 };
