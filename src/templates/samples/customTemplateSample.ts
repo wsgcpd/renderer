@@ -20,7 +20,7 @@ export const cocTemplateCertificate: CocTemplateCertificate = {
       name: "Workforce Singapore",
       documentStore: "0x8aD593607716128c49307743D8CCa1150E4a74FF",
       identityProof: {
-        location: "https://wsg-cpd.netlify.app/",
+        location: "https:/issuer.wsg.gov.sg/",
         type: v2.IdentityProofType.DNSTxt
       }
     }
@@ -31,6 +31,6 @@ export const cocTemplateCertificate: CocTemplateCertificate = {
   $template: {
     name: "COC",
     type: v2.TemplateType.EmbeddedRenderer,
-    url: "https://wsg-cpd.netlify.app/"
+    url: "https:/issuer.wsg.gov.sg/"
   }
 };
